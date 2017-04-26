@@ -5,6 +5,27 @@ This bundle will help you automatically decode json request.
 
 [![License][license-image]][license-link]
 
+Installation
+------------
+* Require the bundle with composer:
+
+``` bash
+composer require symfony-notes/json-request-bundle
+```
+
+* Enable the bundle in the kernel:
+
+``` php
+public function registerBundles()
+{
+    $bundles = [
+        // ...
+        new SymfonyNotes\JsonRequestBundle\SymfonyNotesJsonRequestBundle(),
+        // ...
+    ];
+    ...
+}
+```
 
 [license-link]: https://github.com/symfony-notes/json-request-bundle/blob/master/LICENSE
 [license-image]: https://img.shields.io/dub/l/vibe-d.svg
