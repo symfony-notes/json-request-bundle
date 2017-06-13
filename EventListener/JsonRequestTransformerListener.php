@@ -40,6 +40,10 @@ class JsonRequestTransformerListener implements JsonRequestTransformerListenerIn
      */
     public function onKernelRequest(GetResponseEvent $event)
     {
+        if ($event->getRequest()->getMethod() === 'GET') {
+            return;
+        }
+
         if ('json' !== $event->getRequest()->getContentType() && !$event->getRequest()->getContent()) {
             return;
         }
